@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nateenon Nuntachoknutchapong — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1c1e;
+      --muted: #4a5058;
+      --line: #d8dde3;
+      --accent: #0f4c5c;
+      --bg: #f7f5f2;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "IBM Plex Sans Thai", "IBM Plex Sans", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.45;
+      font-size: 13.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(820px, 100%);
+      margin: 32px auto;
+      background: var(--paper);
+      padding: 48px 52px;
+      box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 12px 40px rgba(26,28,30,.08);
+    }
+
+    header {
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--accent);
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      line-height: 1.2;
+    }
+
+    .name-en {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .title {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .contact {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 20px; }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    .summary p {
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .summary p:last-child { margin-bottom: 0; color: var(--muted); }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+    }
+
+    .skill-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 8px;
+      padding: 3px 0;
+    }
+
+    .skill-label {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 12.5px;
+    }
+
+    .skill-value { color: var(--muted); font-size: 12.5px; }
+
+    .job { margin-bottom: 14px; }
+    .job:last-child { margin-bottom: 0; }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .job-role {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .job-company {
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .job-dates {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      font-family: "IBM Plex Sans", sans-serif;
+    }
+
+    ul {
+      margin-top: 6px;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    li::marker { color: var(--accent); }
+
+    .project { margin-bottom: 8px; }
+    .project strong { font-weight: 600; }
+    .project span { color: var(--muted); }
+
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    .edu-item .school { color: var(--muted); }
+
+    .prefs {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 6px 12px;
+    }
+
+    .prefs dt { font-weight: 600; }
+    .prefs dd { color: var(--muted); }
+
+    .actions {
+      width: min(820px, 100%);
+      margin: 0 auto 40px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .actions button {
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      background: var(--accent);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .actions button:hover { filter: brightness(1.08); }
+
+    @media print {
+      body { background: white; font-size: 11.5pt; }
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      .actions { display: none; }
+      a { color: inherit; text-decoration: none; }
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 28px 22px; margin: 0; box-shadow: none; }
+      .grid-2, .skill-row, .prefs { grid-template-columns: 1fr; }
+      .skill-label { margin-bottom: -4px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>ณทีนนท์ นันทโชคณัชพงศ์</h1>
+      <div class="name-en">Nateenon Nuntachoknutchapong</div>
+      <div class="title">CEO &amp; Chief Architect / Senior Full-Stack Developer</div>
+      <div class="contact">
+        <span>กรุงเทพมหานคร</span>
+        <span>โทร: 095-164-8779</span>
+        <a href="mailto:nateenon01@gmail.com">nateenon01@gmail.com</a>
+        <a href="#" id="linkedin">LinkedIn</a>
+        <a href="#" id="github">GitHub / Portfolio</a>
+      </div>
+    </header>
+
+    <section class="summary">
+      <h2>Professional Summary</h2>
+      <p>
+        ผู้บริหารองค์กรด้านเทคโนโลยี (CEO @ Verisci) และ System Architect ที่มีประสบการณ์ hands-on
+        ทั้งการวางกลยุทธ์ระบบ สถาปัตยกรรมซอฟต์แวร์ และการประยุกต์ใช้ AI/Automation เพื่อขับเคลื่อนธุรกิจ
+        เชี่ยวชาญ Node.js, PHP, SQL, React, Flutter รวมถึง Payment Integration และ RAG/LLM
+      </p>
+      <p>
+        กำลังมองหางาน Remote 100% / Contract (รายเดือน) ในตำแหน่ง Senior Developer / Tech Lead / Specialist
+        เน้น Async Communication วางระบบและส่งมอบงานคุณภาพสูงตรงกำหนด โดยไม่พึ่งการประชุมที่ไม่จำเป็น
+      </p>
+    </section>
+
+    <section>
+      <h2>Core Competencies &amp; Tech Stack</h2>
+      <div class="skill-row">
+        <div class="skill-label">Languages &amp; Frameworks</div>
+        <div class="skill-value">Node.js (Express), Next.js, React, PHP, Flutter</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Database &amp; Infra</div>
+        <div class="skill-value">MySQL, MSSQL, Supabase, Database Design &amp; Optimization, Cloud Infrastructure</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">AI &amp; Automation</div>
+        <div class="skill-value">LLM Integration, RAG Architecture, n8n Workflows, Context Caching</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Fintech &amp; APIs</div>
+        <div class="skill-value">Payment Gateway (Omise, Xendit, Stripe), RESTful APIs, Subscription Billing</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Leadership</div>
+        <div class="skill-value">Technology Strategy, System Architecture, Code Review, Remote Collaboration</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <span class="job-role">CEO &amp; Chief Architect</span>
+            <span class="job-company"> — Verisci</span>
+          </div>
+          <div class="job-dates">เม.ย. 2026 – ปัจจุบัน</div>
+        </div>
+        <ul>
+          <li>ก่อตั้งและบริหารทิศทางเทคโนโลยีของ Verisci เน้นโซลูชัน AI, Data Architecture และซอฟต์แวร์ระดับองค์กร</li>
+          <li>ออกแบบและพัฒนา AI Assistant “Luna” ด้วย Node.js, Express และ EJS รองรับ Real-time processing และ Streaming Data</li>
+          <li>วางสถาปัตยกรรม RAG และบูรณาการ LLMs เข้ากับระบบงานผ่าน n8n</li>
+          <li>พัฒนา Payment Management Dashboard เชื่อม Omise และ Xendit สำหรับตัดค่าธรรมเนียมและระบบ Subscription</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <span class="job-role">IT Manager / System Lead</span>
+            <span class="job-company"> — Jaymart Insurance</span>
+          </div>
+          <div class="job-dates">ก.พ. 2026</div>
+        </div>
+        <ul>
+          <li>บริหารโครงสร้างพื้นฐาน IT และวางสถาปัตยกรรมระบบองค์กรให้เสถียรและปลอดภัย</li>
+          <li>ควบคุมคุณภาพโค้ดผ่าน Code Review ปรับปรุงกระบวนการพัฒนา และลด Technical Debt</li>
+          <li>นำระบบ Automation มาใช้เพื่อลดขั้นตอนงานของทีมปฏิบัติการ</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Projects</h2>
+      <div class="project">
+        <strong>Luna AI Assistant</strong> <span>(Verisci)</span> —
+        ออกแบบ architecture ระบบ AI หลังบ้านทั้งหมด โครงสร้าง minimalist โหลดไว และประมวลผลข้อความ/ข้อมูลขนาดใหญ่ได้อย่างเสถียร
+      </div>
+      <div class="project">
+        <strong>Anytime Travel</strong> <span>(Japan Tour Platform)</span> —
+        ออกแบบและพัฒนาระบบ Booking &amp; Content Platform สำหรับธุรกิจท่องเที่ยว รองรับการขยายตัว (scalable)
+      </div>
+      <div class="project">
+        <strong>Tournament &amp; Event Management System</strong> —
+        พัฒนาระบบคำนวณคะแนนและบริหารจัดการการแข่งขันกอล์ฟขนาดใหญ่ (รองรับผู้ร่วมงาน 100+ คน)
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div>
+          <strong>ปริญญาโท</strong> การจัดการเทคโนโลยีสารสนเทศและการสื่อสาร (ICTM)
+          <div class="school">มหาวิทยาลัยหอการค้าไทย</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <strong>ปริญญาตรี</strong> เทคโนโลยีสารสนเทศและการสื่อสาร (ICT)
+          <div class="school">มหาวิทยาลัยหอการค้าไทย</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Work Preference</h2>
+      <dl class="prefs">
+        <dt>รูปแบบงาน</dt>
+        <dd>Remote 100% / WFH — Full-time Contract หรือ Part-time Retainer</dd>
+        <dt>การสื่อสาร</dt>
+        <dd>Async ผ่าน Slack, LINE, Trello, Jira — ส่งมอบตาม Milestone</dd>
+      </dl>
+    </section>
+  </div>
+
+  <div class="actions">
+    <button type="button" onclick="window.print()">พิมพ์ / บันทึกเป็น PDF</button>
+  </div>
+</body>
+</html>
