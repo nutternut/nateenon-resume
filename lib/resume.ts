@@ -12,7 +12,7 @@ export const profile = {
   phoneHref: "tel:0951648779",
   email: "nateenon01@gmail.com",
   linkedin: "https://www.linkedin.com/in/nateenon-nuntachoknutchapong-81267422a/",
-  github: "https://github.com/nutternut",
+  github: "https://github.com/nutternut/nateenon-resume",
   summary:
     "Accomplished technology executive and practicing system architect with approximately nine years of professional experience in enterprise software strategy, platform architecture, and applied artificial intelligence. Demonstrated capability across full-stack engineering, payment systems, and RAG/LLM integration, with a consistent record of delivering reliable, production-grade solutions. Currently open to senior remote contract engagements as Technical Lead or Specialist, with a preference for asynchronous collaboration and disciplined milestone-based delivery.",
 };

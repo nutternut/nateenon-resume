@@ -33,4 +33,4 @@ npm start
 ## Links
 
 - LinkedIn: [nateenon-nuntachoknutchapong](https://www.linkedin.com/in/nateenon-nuntachoknutchapong-81267422a/)
-- GitHub: [nutternut](https://github.com/nutternut)
+- GitHub: [nutternut/nateenon-resume](https://github.com/nutternut/nateenon-resume)
